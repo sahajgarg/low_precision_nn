@@ -1,0 +1,4 @@
+model="resnet50"
+python main.py --act_bits 8 --weight_bits 8 --e_mac 1. 2. 5. 10. 20. 30. 40. 50. 100. 200. 500. --noise_type thermal --run_name "$model""_noise_bits_sweep" --data_path /mnt/efs --eval_batches 500 --val_batch_size 128 --record_snr  --calibration_batches 5 --override_with_noise_bits --model $model --act_observer percentile --percentile 99.99
+
+python main.py --act_bits 8 --weight_bits 8 --e_mac 1000. --noise_type thermal --run_name "$model""_train_noise_bits_sweep" --data_path /mnt/efs --eval_batches 500 --val_batch_size 128 --record_snr  --calibration_batches 5 --override_with_noise_bits --model $model --train_noise --lr 0.01 --constrained_loss --target_emac 1. 2. 5. 10. 20. 30. 40. 50. 100. 200. 500.  --lambd 8. --act_observer percentile --percentile 99.99 --train_batches 1500
