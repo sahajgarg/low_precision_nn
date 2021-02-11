@@ -57,7 +57,7 @@ def get_stats(module, args, override_with_noise_bits):
             if args.noise_type == "thermal":
                 qnoise_range = (mod.activation_quantizer.observer.max_val - mod.activation_quantizer.observer.min_val).item()
                 qnoise_std = qnoise_range / np.sqrt(12)
-                noise_bits = np.log2(np.round((qnoise_std / np.sqrt(noise_var) + 1.)))
+                noise_bits = np.log2(np.ceil((qnoise_std / np.sqrt(noise_var) + 1.)))
                 stats["noise_bits"].append(noise_bits)
                 snr_offset = 10 * (sig - noise) - 20 * np.log10(2. ** noise_bits - 1)
                 print(f"SNR: {10 * (sig - noise)}, Noise Bits: {noise_bits}, SNR offset: {snr_offset}")
