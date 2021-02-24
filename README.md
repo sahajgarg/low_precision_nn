@@ -1,6 +1,6 @@
 # Post-Training Mixed-Precision Quantization
 
-This repository contains a pytorch implementation of the two papers [Dynamic Precision Analog Computing for Neural Networks]() and [Confounding Tradeoffs for Neural Network Quantization](). These works explore quantization to low bit precision and in the presence of analog noise, and evaluate quantization of neural networks at mixed precision for different layers or channels of neural networks.  
+This repository contains a pytorch implementation of the two papers [Dynamic Precision Analog Computing for Neural Networks](https://arxiv.org/abs/2102.06365) and [Confounding Tradeoffs for Neural Network Quantization](https://arxiv.org/abs/2102.06366). These works explore quantization to low bit precision and in the presence of analog noise, and evaluate quantization of neural networks at mixed precision for different layers or channels of neural networks.  
 
 The repository contains implementations of the following models for simulated quantization:
 - Resnet50
@@ -28,7 +28,7 @@ pip install pytorch torchvision numpy pandas matplotlib
 Mount imagenet to your favorite location, and you should be good to go! 
 
 ### Usage
-Scripts for generating the results are in the `run_noise` and `run_quant` directory for [Dynamic Precision Analog Computing for Neural Networks]() and [Confounding Tradeoffs for Neural Network Quantization](), respectively. You can generate the results using:
+Scripts for generating the results are in the `run_noise` and `run_quant` directory for [Dynamic Precision Analog Computing for Neural Networks](https://arxiv.org/abs/2102.06365) and [Confounding Tradeoffs for Neural Network Quantization](https://arxiv.org/abs/2102.06366), respectively. You can generate the results using:
 
 ```
 source run_noise/plot_emacs.sh
