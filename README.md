@@ -11,7 +11,7 @@ The repository contains implementations of the following models for simulated qu
 - MobilenetV2
 - Googlenet
 
-### Setup 
+## Setup 
 
 We use the Amazon EC2 Linux Deep Learning AMI with the pytorch\_latest\_p37 conda environment with the following additional packages: 
 
@@ -27,7 +27,7 @@ pip install pytorch torchvision numpy pandas matplotlib
 
 Mount imagenet to your favorite location, and you should be good to go! 
 
-### Usage
+## Usage
 Scripts for generating the results are in the `run_noise` and `run_quant` directory for [Dynamic Precision Analog Computing for Neural Networks](https://arxiv.org/abs/2102.06365) and [Confounding Tradeoffs for Neural Network Quantization](https://arxiv.org/abs/2102.06366), respectively. You can generate the results using:
 
 ```
@@ -81,5 +81,27 @@ python main.py \
     --train_subset 1024
 ```
 
-### References
+## References
 If you find the idea or code useful for your research, please consider citing our work:
+
+```
+@misc{garg2021dynamic,
+      title={Dynamic Precision Analog Computing for Neural Networks}, 
+      author={Sahaj Garg and Joe Lou and Anirudh Jain and Mitchell Nahmias},
+      year={2021},
+      eprint={2102.06365},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
+```
+@misc{garg2021confounding,
+      title={Confounding Tradeoffs for Neural Network Quantization}, 
+      author={Sahaj Garg and Anirudh Jain and Joe Lou and Mitchell Nahmias},
+      year={2021},
+      eprint={2102.06366},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
